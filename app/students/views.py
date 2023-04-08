@@ -4,4 +4,8 @@ from django.http import HttpResponse
 # Create your views here.
 
 def jannat(request):
-    return HttpResponse("jannat is good coder")
+    context = {
+        'player_name' : 'jannat',
+        'total_goal' : 10
+    }
+    return render(request, 'index.html', context)
